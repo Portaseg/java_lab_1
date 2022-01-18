@@ -4,67 +4,54 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int zmiennaInt = 7;
-        System.out.println("zmienna int = " + zmiennaInt);
-        /* ćw.2 */
+        /* ćw.3 */
 
-        /*   zad.1 zadeklaruj i zainicjalizuj zmienne różnych typów i wyświetl w konsoli (im więcej tym lepiej ;) ) */
-        byte zmiennabyte = 127;
-        short zmiennashort = 32767;
-        int zmiennaint = 110122;
-        long zmiennalong = 111000111000L;
-        float zmiennafloat = 20.12f;
-        double zmiennadouble = 123456.1234;
-        boolean zmiennaboolean = true;
-        char zmiennachar = 'a';
+        /*  zad.1 napisać interfejs który bedzie słuzył do wpisania danych osobowych:
+         *   a) Imię, nazwisko, wiek, nr indeksu,
+         *   dane mają być wprowadzane z klawiatury w konsoli
+         *   b) wyświetlić dane za pomocą println i printf
+         */
 
-        int zmienna1=128;
-        int a, b=4, c=2;
-        int wynik = b/c;
-        System.out.println("wynik = " + wynik);
+        Scanner scan = new Scanner(System.in);
 
 
-        /*
-        *    zad.2 Napisz kod który będzie wykonywał operacje: dodawania, odejmowania,
-        *    mnożenia, dziealenia i modulo na zmiennych:
-        *    a) liczbaA i liczbaB, dowolne liczby calkowite (int),
-        *    b) liczbaX i liczbaY, dowolne liczby zmiennoprzecinkowe (double)
-        *  */
+        System.out.println("Podaj imię: ");
+        String imie = scan.next();
 
-        int liczbaA = 4;
-        int liczbaB = 2;
-        double liczbaX = 2.1;
-        double liczbaY = 1.2;
+        System.out.println("Podaj nazwisko: ");
+        String nazwisko = scan.next();
 
-        int dodawanie = liczbaA + liczbaB;
-        System.out.println("dodawanie = " + dodawanie);
+        Scanner scan2 = new Scanner(System.in);
+        System.out.println("Podaj wiek: ");
+        int wiek = scan.nextInt();
 
-        int odejmowanie = liczbaA - liczbaB;
-        System.out.println("odejmowanie = " + odejmowanie);
-
-        int mnozenie = liczbaA * liczbaB;
-        System.out.println("mnożenie = " + mnozenie);
-
-        int dzielenie = liczbaA / liczbaB;
-        System.out.println("dzielenie = " + dzielenie);
-
-        int modulo = liczbaA % liczbaB;
-        System.out.println("modulo = " + modulo);
+        Scanner scan1 = new Scanner(System.in);
+        System.out.println("Podaj numer indeksu: ");
+        int index = scan.nextInt();
 
 
-        double Add = liczbaY + liczbaX;
-        System.out.println("Add = " + Add);
+        System.out.println("Twoje imię i nazwisko to " + imie  + " " + nazwisko);
+        System.out.println("Twój indeks to " + index);
+        System.out.println("Twój wiek to " + wiek);
 
-        double Sub = liczbaX - liczbaY;
-        System.out.println("Sub = " + Sub);
+        /*  zad.2 zadeklarować 2 zmienne typu int i wykonać na nich obliczenia arytmetyczn (+, -, *, /, %)
+         *   wynik wyświetlić w konsoli programu
+         */
+        System.out.print("Pierwsza liczba: ");
+        int a = scan.nextInt();
 
-        double multiply = liczbaY * liczbaX;
-        System.out.println("multiply = " + multiply);
+        System.out.print("Druga liczba: ");
+        int b = scan.nextInt();
 
-        double divide = liczbaX / liczbaY;
-        System.out.println("divide = " + divide);
-
-        double modulox = liczbaX % liczbaY;
-        System.out.println("modulox = " + modulox);
+        double dodawanie = a+b;
+        System.out.println("Suma: " + dodawanie);
+        double odejmnowanie = a-b;
+        System.out.println("Różnica: " + odejmnowanie);
+        double mnozenie = a*b;
+        System.out.println("Iloczyn: " + mnozenie);
+        double dzielenie = a/b;
+        System.out.println("Iloraz: " + dzielenie);
+        double reszta = a%b;
+        System.out.println("Reszta: " + reszta);
     }
 }
